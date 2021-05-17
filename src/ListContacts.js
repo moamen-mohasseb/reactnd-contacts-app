@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 class ListContacts extends Component {
+  state ={
+    username: 'Tyler'
+
+  }
     render() {
       console.log('Props', this.props)
       return (

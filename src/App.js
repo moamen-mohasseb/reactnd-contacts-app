@@ -2,26 +2,6 @@ import React, { Component } from 'react'
 import ProfileList from './empty';
 import ListContacts from './ListContacts'
 
-const contacts = [
-  {
-    id: 'tyler',
-    name: 'Tyler McGinnis',
-    handle: '@tylermcginnis',
-    avatarURL: 'http://localhost:5001/tyler.jpg'
-  },
-  {
-    id: 'karen',
-    name: 'Karen Isgrigg',
-    handle: '@karen_isgrigg',
-    avatarURL: 'http://localhost:5001/karen.jpg'
-  },
-  {
-    id: 'richard',
-    name: 'Richard Kalehoff',
-    handle: '@richardkalehoff',
-    avatarURL: 'http://localhost:5001/richard.jpg'
-  },
-]
 const profiles = [
   {
     id: 1,
@@ -113,13 +93,33 @@ const movies = {
 
 
 class App extends Component {
+  state={
+  contacts: [
+    {
+      id: 'tyler',
+      name: 'Tyler McGinnis',
+      handle: '@tylermcginnis',
+      avatarURL: 'http://localhost:5001/tyler.jpg'
+    },
+    {
+      id: 'karen',
+      name: 'Karen Isgrigg',
+      handle: '@karen_isgrigg',
+      avatarURL: 'http://localhost:5001/karen.jpg'
+    },
+    {
+      id: 'richard',
+      name: 'Richard Kalehoff',
+      handle: '@richardkalehoff',
+      avatarURL: 'http://localhost:5001/richard.jpg'
+    },
+  ]
+}
   render() {
     return (
       <div>
-        Hello World
-       <p>how are you</p>
-        <ProfileList  profiles={profiles} users={users} movies={movies}/>
-        <ListContacts contacts={contacts} />
+       
+        <ListContacts contacts={this.state.contacts} />
       </div>
     );
   }
